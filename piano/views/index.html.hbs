@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <h1>{{title}}</h1>
+
+    {{#each notes}}
+      {{#if isSharp}}
+        <button class="sharp" data-note="{{name}}"></button>
+      {{else}}
+        <button data-note="{{name}}"></button>
+      {{/if}}
+    {{/each}}
+
+    <script src="http://localhost:8080/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
